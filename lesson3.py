@@ -80,6 +80,7 @@
 #4
 import sys
 from PyQt6.QtWidgets import QApplication, QWidget, QLabel, QRadioButton
+from PyQt6.QtGui import QIcon
 
 class MainWindow(QWidget):
     def __init__(self):
@@ -87,6 +88,7 @@ class MainWindow(QWidget):
         self.setWindowTitle("Радио кнопки")
         self.setGeometry(100, 100, 300, 200)
 
+        self.setWindowIcon(QIcon("icon.ico"))
         self.radio1 = QRadioButton("Вариант 1", self)
         self.radio1.move(50,50)
         self.radio2 = QRadioButton("Вариант 2", self)
