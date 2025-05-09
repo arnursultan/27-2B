@@ -78,7 +78,7 @@ class DBHelper:
             fields.append("email = ?");  params.append(email)
 
         if not fields:
-            return 0  # нечего обновлять
+            return 0 
 
         params.append(user_id)
         sql = f"UPDATE users SET {', '.join(fields)} WHERE id = ?"
